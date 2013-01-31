@@ -1,0 +1,13 @@
+td .width_inp{
+    width: 110px
+}
+td select{
+    width: 270px;
+}
+td .width_inp2{
+    width: 60px;
+    margin-right: 10px;
+}
+.top_kaishi{
+    padding-right: 50px;
+}

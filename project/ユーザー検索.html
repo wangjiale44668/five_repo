@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Admin Theme 1.0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Le styles -->
+    <link href="http://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet" type="text/css">
+    <link href="./assets/css/bootstrap.css" rel="stylesheet">
+    <link href="./assets/css/font-awesome.css" rel="stylesheet">
+    <link href="./assets/css/index.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/css/jiansuo.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/css/card.css" rel="stylesheet" type="text/css" />
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="masthead">
+    <div class="container bainju"><!--top中的文字区域的位置-->
+        <div class="masthead-top clearfix topdebianju"><!-- 第一部分的位置-->
+            <ul class="nav nav-pills pull-right">
+                <li>
+                    <i class="icon-play"></i> Logout
+                </li>
+            </ul>
+            <h1><img src="./assets/img/图片1.png" class="top_picture" alt="picture" /> ユーザーログイン</h1>
+        </div>
+        <div class="navbar">
+            <div class="navbar-inner topleftc"><!--颜色控制-->
+                <div class="container topleftbianju "><!--top中的下面部分距左边的距离-->
+                    <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <div class="nav-collapse">
+                        <ul class="nav">
+                            <li class="active">
+                                <a href="#"><i class="icon-home"></i> Dashboard</a>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#"> ユーザー管理 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="listing.html">ユーザー検索</a></li>
+                                    <li><a href="listing.html">新規追加</a></li>
+                                    <li><a href="listing.html">編集・削除</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#"> クライアント管理 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="listing.html">クライアント検索</a></li>
+                                    <li><a href="orders.html">新規追加</a></li>
+                                    <li><a href="listing.html">編集・削除</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#"> 物件管理 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="report.html">物件検索</a></li>
+                                    <li><a href="report.html">新規追加</a></li>
+                                    <li><a href="report.html">編集・削除</a></li>
+                                    <li><a href="report.html">CSVアップロード</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">売上管理 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="listing.html">期間集計</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#"> ページ管理 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="listing.html">新規追加</a></li>
+                                    <li><a href="listing.html">編集・削除</a></li>
+                                    <li><a href="listing.html">メール追加</a></li>
+                                    <li><a href="listing.html">メール編集・削除</a></li>
+                                    <li><a href="listing.html">エリア編集</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="secondary-masthead">
+    <span class="middle">ユーザー管理/ユーザー検索</span>
+</div>
+<div class="main_all">
+    <form>
+        <h6>ユーザー検索条件を指定してください</h6>
+        <table class="tbstyle1" >
+            <tr>
+                <td >名前（漢字）</td>
+                <td class="top_kaishi" >
+                    <input type="text"/></td>
+                <td >名前（フリガナ）</td>
+                <td>
+                    <input type="text" /></td>
+            </tr>
+            <tr>
+                <td>メールアドレス</td>
+                <td><input type="text" /></td>
+                <td>電話番号</td>
+                <td><input type="text" /></td>
+            </tr>
+            <tr>
+                <td>希望坪数</td>
+                <td>
+                        <select >
+                            <option>下限なし</option>
+                            <option>１０坪以下</option>
+                            <option>１１坪</option>
+                            <option>２１坪</option>
+                            <option>３１坪</option>
+                            <option>４１坪</option>
+                            <option>５１坪</option>
+                        </select>~
+                        <select>
+                            <option>上限なし</option>
+                            <option>２０坪</option>
+                            <option>３０坪</option>
+                            <option>４０坪</option>
+                            <option>５０坪</option>
+                            <option>１００坪</option>
+                        </select>
+                </td>
+                <td>希望賃料</td>
+                <td>
+                    <select >
+                        <option>下限なし</option>
+                        <option>１０万円</option>
+                        <option>１１万円</option>
+                        <option>２１万円</option>
+                        <option>３１万円</option>
+                        <option>４１万円</option>
+                        <option>５１万円</option>
+                        <option>６１万円</option>
+                        <option>７１万円</option>
+                        <option>８１万円</option>
+                        <option>９１万円</option>
+                        <option>１０１万円</option>
+                    </select>~
+                    <select >
+                        <option>上限なし</option>
+                        <option>２０万円</option>
+                        <option>３０万円</option>
+                        <option>４０万円</option>
+                        <option>５０万円</option>
+                        <option>６０万円</option>
+                        <option>７０万円</option>
+                        <option>８０万円</option>
+                        <option>９０万円</option>
+                        <option>１００万円</option>
+                        <option>２００万円</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>希望坪数</td>
+                <td>
+                    <select class="middle_st">
+                        <option>何階でも可</option>
+                        <option>B1階</option>
+                        <option>1階</option>
+                        <option>2階</option>
+                        <option>3階以上</option>
+                        <option>複数階（１階を含む）</option>
+                        <option>複数階（1階を含まない）</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <table class="tbstyle1 tbstyle2" >
+            <tr>
+                <th rowspan="4" width="150">希望業態</th>
+                <td><input type="checkbox" />レストラン?ダイニングバー</td>
+                <td><input type="checkbox" />レストラン?ダイニングバー</td>
+                <td> <input type="checkbox" />鉄板焼き?お好み焼き</td>
+                <td> <input type="checkbox" />喫茶?軽食（カフェ）</td>
+                <td> <input type="checkbox" />カラオケ?パ</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" />そば?うどん</td>
+                <td><input type="checkbox" />和食</td>
+                <td><input type="checkbox" />焼肉</td>
+                <td><input type="checkbox" />中華料理</td>
+                <td><input type="checkbox" />イタリア料理</td>
+            </tr>
+            <tr>
+                <td> <input type="checkbox" />レストラン?ダイニングバー</td>
+                <td><input type="checkbox" />鉄板焼き?お好み焼き</td>
+                <td><input type="checkbox" />喫茶?軽食（カフェ）</td>
+                <td> <input type="checkbox" />喫茶?軽食（カフェ）</td>
+                <td> <input type="checkbox" />喫茶?軽食（カフェ）</td>
+            </tr>
+            <tr>
+                <td> <input type="checkbox" />喫茶?軽食（カフェ）</td>
+                <td> <input type="checkbox" />喫茶?軽食（カフェ）</td>
+                <td> <input type="checkbox" />喫茶?軽食（カフェ）</td>
+                <td> <input type="checkbox" />喫茶?軽食（カフェ）</td>
+            </tr>
+        </table>
+       <table class="tbstyle3" >
+           <tr>
+               <th style="margin-right: 10px">希望地区</th>
+               <td>
+                   <div id="card">
+                       <h3  onclick="getTab(1)">東京23区</h3>
+                       <h3 onclick="getTab(2)">東京23区外</h3>
+                       <h3 onclick="getTab(3)">神奈川県</h3>
+                       <h3 onclick="getTab(2)">埼玉県</h3>
+                       <h3 onclick="getTab(3)">千葉県</h3>
+                       <div  id="d1" class="block">
+                           <table class="tbstyle1 tbstyle2 cardtb">
+                               <tr>
+                                   <td><input type="checkbox" />すべてチェックする</td>
+                               </tr>
+                               <tr>
+                                   <td><input type="checkbox" />葛飾区</td>
+                                   <td><input type="checkbox" />江戸川区</td>
+                                   <td><input type="checkbox" />横浜市鶴見区</td>
+                                   <td><input type="checkbox" />港区</td>
+                                   <td><input type="checkbox" />荒川区</td>
+                               </tr>
+                               <tr>
+                                   <td> <input type="checkbox" />渋谷区</td>
+                                   <td> <input type="checkbox" />新宿区</td>
+                                   <td> <input type="checkbox" />杉並区</td>
+                                   <td> <input type="checkbox" />横浜市鶴見区</td>
+                                   <td> <input type="checkbox" />千代田区</td>
+                               </tr>
+                               <tr>
+                                   <td> <input type="checkbox" />足立区</td>
+                                   <td> <input type="checkbox" />台東区</td>
+                                   <td> <input type="checkbox" />大田区</td>
+                                   <td> <input type="checkbox" />渋谷区</td>
+                                   <td> <input type="checkbox" />中野区</td>
+                               </tr>
+                               <tr>
+                                   <td> <input type="checkbox" />墨田区</td>
+                                   <td> <input type="checkbox" />横浜市鶴見区</td>
+                                   <td> <input type="checkbox" />練馬区</td>
+                           </table>
+                       </div>
+                       <div  id="d2" >
+                           <table class=" tbstyle2 cardtb" >
+                               <tr>
+                                   <td><input type="checkbox" />すべてチェックする</td>
+                               </tr>
+                               <tr>
+                                   <td><input type="checkbox" />あきる野市</td>
+                                   <td><input type="checkbox" />稲城市</td>
+                                   <td><input type="checkbox" />羽村市</td>
+                                   <td><input type="checkbox" />国分寺市</td>
+                                   <td><input type="checkbox" />川崎市中原区</td>
+                               </tr>
+                               <tr>
+                                   <td> <input type="checkbox" />川崎市中原区</td>
+                                   <td><input type="checkbox" />三鷹市</td>
+                                   <td><input type="checkbox" />小金井市</td>
+                                   <td> <input type="checkbox" />小平市</td>
+                                   <td> <input type="checkbox" />昭島市</td>
+                               </tr>
+                               <tr>
+                                   <td> <input type="checkbox" />清瀬市</td>
+                                   <td> <input type="checkbox" />西東京市</td>
+                                   <td> <input type="checkbox" />青梅市</td>
+                                   <td> <input type="checkbox" />川崎市中原区</td>
+                                   <td> <input type="checkbox" />町田市</td>
+                               </tr>
+                               <tr>
+                                   <td> <input type="checkbox" />調布市</td>
+                                   <td><input type="checkbox" />川崎市中原区</td>
+                                   <td><input type="checkbox" />東村山市</td>
+                                   <td> <input type="checkbox" />東大和市</td>
+                                   <td> <input type="checkbox" />日野市</td>
+                               </tr>
+                               <tr>
+                                   <td> <input type="checkbox" />八王子市</td>
+                                   <td> <input type="checkbox" />府中市</td>
+                                   <td> <input type="checkbox" />川崎市中原区</td>
+                                   <td> <input type="checkbox" />武蔵野市</td>
+                                   <td> <input type="checkbox" />福生市</td>
+                               </tr>
+                               <tr>
+                                   <td> <input type="checkbox" />立川市</td>
+                                   <td> <input type="checkbox" />西多摩郡</td>
+                               </tr>
+                           </table>
+                       </div>
+                       <div  id="d3" >
+                           <table class=" tbstyle2 cardtb" >
+                               <tr>
+                                   <td><input type="checkbox" />すべてチェックする</td>
+                               </tr>
+                               <tr>
+                                   <td><input type="checkbox" />横山市旭区</td>
+                                   <td><input type="checkbox" />横浜市磯子区</td>
+                                   <td><input type="checkbox" />横浜市栄区</td>
+                                   <td><input type="checkbox" />横浜市金沢区</td>
+                                   <td><input type="checkbox" />横浜市戸塚区</td>
+                               </tr>
+                               <tr>
+                                   <td> <input type="checkbox" />横浜市港南区</td>
+                                   <td><input type="checkbox" />横浜市港北区</td>
+                                   <td><input type="checkbox" />横浜市神奈川区</td>
+                                   <td> <input type="checkbox" />横浜市瀬谷区</td>
+                                   <td> <input type="checkbox" />横浜市西区</td>
+                               </tr>
+                               <tr>
+                                   <td> <input type="checkbox" />横浜市青葉区</td>
+                                   <td> <input type="checkbox" />横浜市泉区</td>
+                                   <td> <input type="checkbox" />横浜市中区</td>
+                                   <td> <input type="checkbox" />横浜市鶴見区</td>
+                                   <td> <input type="checkbox" />横浜市都筑区</td>
+                               </tr>
+                               <tr>
+                                   <td> <input type="checkbox" />横浜市南区</td>
+                                   <td><input type="checkbox" />横浜市保土ケ谷区</td>
+                                   <td><input type="checkbox" />横浜市緑区</td>
+                                   <td> <input type="checkbox" />川崎市宮前区</td>
+                                   <td> <input type="checkbox" />川崎市幸区</td>
+                               </tr>
+                               <tr>
+                                   <td> <input type="checkbox" />川崎市高津区</td>
+                                   <td> <input type="checkbox" />川崎市川崎区</td>
+                                   <td> <input type="checkbox" />川崎市多摩区</td>
+                                   <td> <input type="checkbox" />川崎市中原区</td>
+                                   <td> <input type="checkbox" />川崎市麻生区</td>
+                               </tr>
+                               <tr>
+                                   <td> <input type="checkbox" />横須賀市</td>
+                                   <td> <input type="checkbox" />平塚市</td>
+                                   <td> <input type="checkbox" />鎌倉市</td>
+                                   <td> <input type="checkbox" />藤沢市</td>
+                                   <td> <input type="checkbox" />田原市</td>
+                               </tr>
+                               <tr>
+                                   <td> <input type="checkbox" />茅ヶ崎市</td>
+                                   <td> <input type="checkbox" />逗子市</td>
+                                   <td> <input type="checkbox" />模原市</td>
+                                   <td> <input type="checkbox" />秦野市</td>
+                                   <td> <input type="checkbox" />三浦市</td>
+                               </tr>
+                               <tr>
+                                   <td> <input type="checkbox" />厚木市</td>
+                                   <td> <input type="checkbox" />大和市</td>
+                                   <td> <input type="checkbox" />伊勢原市</td>
+                                   <td> <input type="checkbox" />海老名市</td>
+                                   <td> <input type="checkbox" />座間市</td>
+                               </tr>
+                               <tr>
+                                   <td> <input type="checkbox" />高座郡</td>
+                                   <td> <input type="checkbox" />綾瀬市</td>
+                                   <td> <input type="checkbox" />三浦郡</td>
+                                   <td> <input type="checkbox" />高座郡</td>
+                                   <td> <input type="checkbox" />三浦市</td>
+                               </tr>
+                               <tr>
+                                   <td> <input type="checkbox" />足柄上郡</td>
+                                   <td> <input type="checkbox" />足柄下郡</td>
+                                   <td> <input type="checkbox" />愛甲郡</td>
+                                   <td> <input type="checkbox" />津久井郡</td>
+                               </tr>
+                           </table>
+                       </div>
+                       <div  id="d4" >
+                           <table class=" tbstyle2 cardtb" >
+                               <tr>
+                                   <td><input type="checkbox" />すべてチェックする</td>
+                               </tr>
+                               <tr>
+                                   <td><input type="checkbox" />さいたま市浦和区</td>
+                                   <td><input type="checkbox" />さいたま市大宮区</td>
+                                   <td><input type="checkbox" />さいたま市北区</td>
+                                   <td><input type="checkbox" />さいたま市桜区</td>
+                                   <td><input type="checkbox" />さいたま市中央区</td>
+                               </tr>
+                               <tr>
+                                   <td> <input type="checkbox" />さいたま市西区</td>
+                                   <td><input type="checkbox" />さいたま市緑区</td>
+                                   <td><input type="checkbox" />さいたま市南区</td>
+                                   <td> <input type="checkbox" />横浜市さいたま市見沼区</td>
+                                   <td> <input type="checkbox" />上尾市</td>
+                               </tr>
+                               <tr>
+                                   <td> <input type="checkbox" />朝霞市</td>
+                                   <td> <input type="checkbox" />入間市</td>
+                                   <td> <input type="checkbox" />岩槻市</td>
+                                   <td> <input type="checkbox" />桶川市</td>
+                                   <td> <input type="checkbox" />春日部市</td>
+                               </tr>
+                               <tr>
+                                   <td> <input type="checkbox" />加須市</td>
+                                   <td><input type="checkbox" />ふじみ野市</td>
+                                   <td><input type="checkbox" />川口市</td>
+                                   <td> <input type="checkbox" />川越市</td>
+                                   <td> <input type="checkbox" />北本市</td>
+                               </tr>
+                               <tr>
+                                   <td> <input type="checkbox" />行田市</td>
+                                   <td> <input type="checkbox" />久喜市</td>
+                                   <td> <input type="checkbox" />熊谷市</td>
+                                   <td> <input type="checkbox" />鴻巣市</td>
+                                   <td> <input type="checkbox" />越谷市</td>
+                               </tr>
+                               <tr>
+                                   <td> <input type="checkbox" />坂戸市</td>
+                                   <td><input type="checkbox" />幸手市</td>
+                                   <td><input type="checkbox" />狭山市</td>
+                                   <td> <input type="checkbox" />志木市</td>
+                                   <td> <input type="checkbox" />草加市</td>
+                               </tr>
+                               <tr>
+                                   <td> <input type="checkbox" />秩父市</td>
+                                   <td> <input type="checkbox" />鶴ヶ島市</td>
+                                   <td> <input type="checkbox" />所沢市</td>
+                                   <td> <input type="checkbox" />戸田市</td>
+                                   <td> <input type="checkbox" />新座市</td>
+                               </tr>
+                               <tr>
+                                   <td> <input type="checkbox" />蓮田市</td>
+                                   <td><input type="checkbox" />鳩ヶ谷市</td>
+                                   <td><input type="checkbox" />羽生市</td>
+                                   <td> <input type="checkbox" />飯能市</td>
+                                   <td> <input type="checkbox" />東松山市</td>
+                               </tr>
+                               <tr>
+                                   <td> <input type="checkbox" />日高市</td>
+                                   <td> <input type="checkbox" />深谷市</td>
+                                   <td> <input type="checkbox" />富士見市</td>
+                                   <td> <input type="checkbox" />本庄市</td>
+                                   <td> <input type="checkbox" />三郷市</td>
+                               </tr>
+                               <tr>
+                                   <td> <input type="checkbox" />八潮市</td>
+                                   <td> <input type="checkbox" />吉川市</td>
+                                   <td> <input type="checkbox" />和光市</td>
+                                   <td> <input type="checkbox" />蕨市</td>
+                                   <td> <input type="checkbox" />入間郡</td>
+                               </tr>
+                               <tr>
+                                   <td> <input type="checkbox" />大里郡</td>
+                                   <td><input type="checkbox" />北足立郡</td>
+                                   <td><input type="checkbox" />北葛飾郡</td>
+                                   <td> <input type="checkbox" />北埼玉郡</td>
+                                   <td> <input type="checkbox" />児玉郡</td>
+                               </tr>
+                               <tr>
+                                   <td> <input type="checkbox" />秩父郡</td>
+                                   <td> <input type="checkbox" />比企郡</td>
+                                   <td> <input type="checkbox" />南埼玉郡</td>
+                               </tr>
+                           </table>
+                       </div>
+                       <div  id="d5" >
+                           <table class=" tbstyle2 cardtb" >
+                               <tr>
+                                   <td><input type="checkbox" />すべてチェックする</td>
+                               </tr>
+                               <tr>
+                                   <td><input type="checkbox" />千葉市中央区</td>
+                                   <td><input type="checkbox" />千葉市花見川区</td>
+                                   <td><input type="checkbox" />千葉市稲毛区</td>
+                                   <td><input type="checkbox" />千葉市若葉区</td>
+                                   <td><input type="checkbox" />千葉市緑区</td>
+                               </tr>
+                               <tr>
+                                   <td> <input type="checkbox" />千葉市美浜区</td>
+                                   <td><input type="checkbox" />銚子市</td>
+                                   <td><input type="checkbox" />市川市</td>
+                                   <td> <input type="checkbox" />船橋市</td>
+                                   <td> <input type="checkbox" />館山市</td>
+                               </tr>
+                               <tr>
+                                   <td> <input type="checkbox" />木更津市</td>
+                                   <td> <input type="checkbox" />松戸市</td>
+                                   <td> <input type="checkbox" />野田市</td>
+                                   <td> <input type="checkbox" />佐原市</td>
+                                   <td> <input type="checkbox" />茂原市</td>
+                               </tr>
+                               <tr>
+                                   <td> <input type="checkbox" />佐倉市</td>
+                                   <td><input type="checkbox" />成田市</td>
+                                   <td><input type="checkbox" />東金市</td>
+                                   <td> <input type="checkbox" />旭市</td>
+                                   <td> <input type="checkbox" />八日市場市</td>
+                               </tr>
+                               <tr>
+                                   <td> <input type="checkbox" />習志野市</td>
+                                   <td> <input type="checkbox" />柏市</td>
+                                   <td> <input type="checkbox" />勝浦市</td>
+                                   <td> <input type="checkbox" />市原市</td>
+                                   <td> <input type="checkbox" />流山市</td>
+                               </tr>
+                               <tr>
+                                   <td><input type="checkbox" />八千代市</td>
+                                   <td><input type="checkbox" />我孫子市</td>
+                                   <td><input type="checkbox" />鴨川市</td>
+                                   <td><input type="checkbox" />鎌ヶ谷市</td>
+                                   <td><input type="checkbox" />君津市</td>
+                               </tr>
+                               <tr>
+                                   <td> <input type="checkbox" />富津市</td>
+                                   <td><input type="checkbox" />浦安市</td>
+                                   <td><input type="checkbox" />四街道市</td>
+                                   <td> <input type="checkbox" />袖ヶ浦市</td>
+                                   <td> <input type="checkbox" />八街市</td>
+                               </tr>
+                               <tr>
+                                   <td> <input type="checkbox" />印南市</td>
+                                   <td> <input type="checkbox" />白井市</td>
+                                   <td> <input type="checkbox" />冨里市</td>
+                                   <td> <input type="checkbox" />安房郡</td>
+                                   <td> <input type="checkbox" />夷隈郡</td>
+                               </tr>
+                               <tr>
+                                   <td> <input type="checkbox" />長生郡</td>
+                                   <td><input type="checkbox" />山武郡</td>
+                                   <td><input type="checkbox" />東葛飾郡</td>
+                                   <td> <input type="checkbox" />印旛郡</td>
+                                   <td> <input type="checkbox" />香取郡</td>
+                               </tr>
+                               <tr>
+                                   <td> <input type="checkbox" />海上郡</td>
+                                   <td> <input type="checkbox" />匝瑳郡</td>
+                                   <td> <input type="checkbox" />印西市</td>
+                               </tr>
+                           </table>
+                       </div>
+                   </div>
+               </td>
+           </tr>
+       </table>
+        <table class="tbstyle4" >
+            <tr>
+                <th id="th2">希望駅</th>
+                <th>路線を選択してください</th>
+                <th>駅を選択してください</th>
+            </tr>
+            <tr>
+                <th>選択1</th>
+                <td>
+                    <select>
+                        <option>JR東海道本線</option>
+                    </select>
+                </td>
+                <td>
+                    <select>
+                        <option>全駅を選択</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>選択1</th>
+                <td>
+                    <select>
+                        <option>JR山手線</option>
+                    </select>
+                </td>
+                <td>
+                    <select>
+                        <option>全駅を選択</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>選択1</th>
+                <td>
+                    <select>
+                        <option>JR京浜東北・根岸線</option>
+                    </select>
+                </td>
+                <td>
+                    <select>
+                        <option>全駅を選択</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>選択1</th>
+                <td>
+                    <select>
+                        <option>JR中央線</option>
+                    </select>
+                </td>
+                <td>
+                    <select>
+                        <option>全駅を選択</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>選択1</th>
+                <td>
+                    <select>
+                        <option>JR中央本線</option>
+                    </select>
+                </td>
+                <td>
+                    <select>
+                        <option>全駅を選択</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+<div class="navbar-inner secondary2"><p>この条件で検索する</p></div>
+<div class="bottom1">検索結果一覧</div>
+<div class="bottom2">
+    <span class="span_math">1,234件</span>が該当しました.
+    <div class="navbar-inner secondary3"><p>CSVダウンロード</p></div>
+    <div class="yema_all">
+        <div class="pagination pull-left yema_out">
+            <ul>
+                <li><a href="#">Prev</a></li>
+                <li class="active">
+                    <a href="#">1</a>
+                </li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">Next</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="bottom3">UNDER CONSTRUCTION</div>
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/excanvas.min.js"></script>
+<script src="assets/js/jquery.flot.min.js"></script>
+<script src="assets/js/jquery.flot.resize.js"></script>
+<script type="text/javascript">
+    $(function () {
+        var d1 = [];
+        d1.push([0, 20]);
+        d1.push([1, 16]);
+        d1.push([2, 17]);
+        d1.push([3, 25]);
+        d1.push([4, 51]);
+        d1.push([5, 57]);
+        d1.push([6, 46]);
+        d1.push([7, 36]);
+        d1.push([8, 27]);
+        d1.push([9, 36]);
+        d1.push([10, 38]);
+        d1.push([11, 41]);
+        d1.push([12, 45]);
+        d1.push([13, 48]);
+        d1.push([14, 40]);
+        d1.push([15, 36]);
+        d1.push([16, 34]);
+        $.plot($("#placeholder"), [ d1 ], { grid: { backgroundColor: 'white', color: '#999', borderWidth: 1, borderColor: '#DDD' }, colors: ["#6ECBE2"], series: { lines: { show: true, fill: true, fillColor: "rgba(110, 203, 226, 0.5)" } } });
+    });
+</script>
+<script type="text/javascript">
+    var num=5;
+    function getTab(now){
+        for(var i=1;i<=num;i++){
+            if(i==now){
+                document.getElementById("d"+i).style.display="block";
+            }else{
+                document.getElementById("d"+i).style.display="none";
+            }
+        }
+    }
+</script>
+</body>
+</html>
