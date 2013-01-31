@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Admin Theme 1.0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Le styles -->
+    <link href="http://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet" type="text/css">
+    <link href="./assets/css/bootstrap.css" rel="stylesheet">
+    <link href="./assets/css/font-awesome.css" rel="stylesheet">
+    <link href="./assets/css/index.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/css/jiansuo.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/css/three.css" rel="stylesheet" type="text/css" />
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="masthead">
+    <div class="container bainju"><!--top中的文字区域的位置-->
+        <div class="masthead-top clearfix topdebianju"><!-- 第一部分的位置-->
+            <ul class="nav nav-pills pull-right">
+                <li>
+                    <i class="icon-play"></i> Logout
+                </li>
+            </ul>
+            <h1><img src="./assets/img/图片1.png" class="top_picture" alt="picture" /> ユーザーログイン</h1>
+        </div>
+        <div class="navbar">
+            <div class="navbar-inner topleftc"><!--颜色控制-->
+                <div class="container topleftbianju "><!--top中的下面部分距左边的距离-->
+                    <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <div class="nav-collapse">
+                        <ul class="nav">
+                            <li class="active">
+                                <a href="#"><i class="icon-home"></i> Dashboard</a>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#"> ユーザー管理 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="listing.html">ユーザー検索</a></li>
+                                    <li><a href="listing.html">新規追加</a></li>
+                                    <li><a href="listing.html">編集・削除</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#"> クライアント管理 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="listing.html">クライアント検索</a></li>
+                                    <li><a href="orders.html">新規追加</a></li>
+                                    <li><a href="listing.html">編集・削除</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#"> 物件管理 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="report.html">物件検索</a></li>
+                                    <li><a href="report.html">新規追加</a></li>
+                                    <li><a href="report.html">編集・削除</a></li>
+                                    <li><a href="report.html">CSVアップロード</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">売上管理 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="listing.html">期間集計</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#"> ページ管理 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="listing.html">新規追加</a></li>
+                                    <li><a href="listing.html">編集・削除</a></li>
+                                    <li><a href="listing.html">メール追加</a></li>
+                                    <li><a href="listing.html">メール編集・削除</a></li>
+                                    <li><a href="listing.html">エリア編集</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="secondary-masthead">
+    <span class="middle">クライアント管理/クライアント検索</span>
+</div>
+<div class="main_all">
+<form>
+<h6>クライアント検索条件を指定してください</h6>
+<table class="tbstyle1" >
+    <tr>
+        <td >会社名</td>
+        <td class="top_kaishi">
+            <input type="text"/></td>
+        <td >会社No.</td>
+        <td>
+            <input type="text" /></td>
+    </tr>
+    <tr>
+        <td>担当者名（漢字）</td>
+        <td><input type="text" /></td>
+        <td>担当者名(フリガナ）</td>
+        <td><input type="text" /></td>
+    </tr>
+    <tr>
+        <td>郵便番号</td>
+        <td><input type="text"  class="width_inp"  /></td>
+    </tr>
+    <tr>
+        <td >住所</td>
+        <td >
+            <input type="text"/></td>
+        <td >建物名・号室.</td>
+        <td>
+            <input type="text" />
+        </td>
+    </tr>
+    <tr>
+        <td >メールアドレス</td>
+        <td >
+            <input type="text"/></td>
+        <td >メルマガ登録.</td>
+        <td>
+            <select >
+                <option>希望する</option>
+                <option>希望しない</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td >電話番号</td>
+        <td>
+            <input type="text"/></td>
+        <td >FAX</td>
+        <td>
+            <input type="text" />
+        </td>
+    </tr>
+    <tr>
+        <td >登録物件数</td>
+        <td>
+            <input type="text" class="width_inp2" />件以上
+            <input type="text" class="width_inp2" />件以下
+        </td>
+        <td >物件ステータス</td>
+        <td>
+            <select >
+                <option>成約実績あり</option>
+            </select>
+        </td>
+    </tr>
+</table>
+</form>
+</div>
+<div class="navbar-inner secondary2"><p>この条件で検索する</p></div>
+<div class="bottom1">検索結果一覧</div>
+<div class="bottom2">
+    <span class="span_math">1,234件</span>が該当しました.
+    <div class="navbar-inner secondary3"><p>CSVダウンロード</p></div>
+    <div class="yema_all">
+        <div class="pagination pull-left yema_out">
+            <ul>
+                <li><a href="#">Prev</a></li>
+                <li class="active">
+                    <a href="#">1</a>
+                </li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">Next</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="bottom3">UNDER CONSTRUCTION</div>
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/excanvas.min.js"></script>
+<script src="assets/js/jquery.flot.min.js"></script>
+<script src="assets/js/jquery.flot.resize.js"></script>
+<script type="text/javascript">
+    $(function () {
+        var d1 = [];
+        d1.push([0, 20]);
+        d1.push([1, 16]);
+        d1.push([2, 17]);
+        d1.push([3, 25]);
+        d1.push([4, 51]);
+        d1.push([5, 57]);
+        d1.push([6, 46]);
+        d1.push([7, 36]);
+        d1.push([8, 27]);
+        d1.push([9, 36]);
+        d1.push([10, 38]);
+        d1.push([11, 41]);
+        d1.push([12, 45]);
+        d1.push([13, 48]);
+        d1.push([14, 40]);
+        d1.push([15, 36]);
+        d1.push([16, 34]);
+        $.plot($("#placeholder"), [ d1 ], { grid: { backgroundColor: 'white', color: '#999', borderWidth: 1, borderColor: '#DDD' }, colors: ["#6ECBE2"], series: { lines: { show: true, fill: true, fillColor: "rgba(110, 203, 226, 0.5)" } } });
+    });
+</script>
+</body>
+</html>
